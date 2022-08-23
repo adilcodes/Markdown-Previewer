@@ -1,11 +1,15 @@
 import React from 'react'
+import { marked } from "marked";
 
-function previewer() {
+function Previewer(props) {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div
+        id="preview"
+        dangerouslySetInnerHTML={{__html:marked.parse(props.content)}}
+      ></div>
+    </>
   )
 }
 
-export default previewer
+export default Previewer

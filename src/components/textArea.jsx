@@ -1,11 +1,18 @@
 import React from 'react'
 
-function textArea() {
+function TextArea(props) {
   return (
-    <div>
-      
-    </div>
+    <>
+      <textarea
+        name="editor"
+        id="editor"
+        cols="30"
+        rows="10"
+        value={props.content}
+        onChange={props.handler}
+      ></textarea>
+    </>
   )
 }
 
-export default textArea
+export default TextArea
