@@ -11,7 +11,8 @@ export default class Previewer extends Component {
     <>
       <div
         id="preview"
-        // dangerouslySetInnerHTML={{__html:marked.parse(this.props.content)}}
+        dangerouslySetInnerHTML={{__html:marked.parse(this.props.content)}}
+        style={{height: window.innerHeight - 130 + "px"}}
       ></div>
     </>
   )

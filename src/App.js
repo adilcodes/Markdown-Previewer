@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { marked } from "marked";
 import TextArea from "./components/TextArea";
 import Previewer from "./components/Previewer";
+import Footer from "./components/Footer";
 
 export default class App extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ export default class App extends Component {
         <div className="topBar">
           <h2 className="main-heading">Markdown Previewer</h2>
         </div>
+
         <div className="flex">
           <TextArea
             content={this.state.content}
@@ -52,6 +54,7 @@ export default class App extends Component {
           />
           <Previewer content={this.state.content} />
         </div>
+        <Footer/>
       </>
     );
   }

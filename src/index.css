@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 .flex{
     display: flex;
@@ -13,13 +14,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 12px 0;
+    padding: 10px 0;
     background-color: #021226;
     color: #fff;
 }
 .main-heading{
     text-align: center;
-    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
 }
 #editor{
@@ -32,6 +32,7 @@
     border: none;
     border-right: 2px solid rgb(107, 105, 105);
     outline: none;
+    overflow-y: scroll;
 }
 
 #preview{
@@ -42,4 +43,19 @@
     resize: none;
     border: none;
     border-left: 2px solid rgb(107, 105, 105);
+    overflow-y: scroll;
+}
+
+/* Footer Designing */
+.footer{
+    background-color: #021226;
+    color: #fff;
+    padding: 5px 0;
+}
+.footer a{
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.footer a:hover{
+    color: #36cde8;
 }
