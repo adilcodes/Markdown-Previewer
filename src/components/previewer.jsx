@@ -11,7 +11,7 @@ export default class Previewer extends Component {
     <>
       <div
         id="preview"
-        dangerouslySetInnerHTML={{__html:marked.parse(this.props.content)}}
+        // dangerouslySetInnerHTML={{__html:marked.parse(this.props.content)}}
       ></div>
     </>
   )

@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { marked } from "marked";
 import TextArea from "./components/TextArea";
 import Previewer from "./components/Previewer";
 
-
 export default class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
-      content : `# H1
+      content: `# H1
 ## H2
 [Link](https://www.example.com)
 \`code\`
@@ -25,28 +24,35 @@ export default class App extends Component {
 - Third item
 > blockquote
 ![alt text](image.jpg)
-**bold text**`
-    }
-    this.monitorContent = this.monitorContent.bind(this)
+**bold text**`,
+    };
+    this.monitorContent = this.monitorContent.bind(this);
 
     marked.setOptions({
-      breaks : true,
-    })
+      breaks: true,
+    });
   }
 
-  monitorContent(event){
+  monitorContent(event) {
     this.setState({
-      content : event.target.value
+      content: event.target.value,
     });
   }
 
   render() {
     return (
       <>
-        <h1 className="main-heading">Markdown Previewer</h1>
-        <TextArea content={this.state.content} handler={this.monitorContent} />
-        <Previewer content={this.state.content} />
+        <div className="topBar">
+          <h2 className="main-heading">Markdown Previewer</h2>
+        </div>
+        <div className="flex">
+          <TextArea
+            content={this.state.content}
+            handler={this.monitorContent}
+          />
+          <Previewer content={this.state.content} />
+        </div>
       </>
-    )
+    );
   }
 }

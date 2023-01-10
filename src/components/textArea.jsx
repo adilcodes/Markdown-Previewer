@@ -13,8 +13,9 @@ export default class TextArea extends Component {
           id="editor"
           cols="30"
           rows="10"
-          value={this.props.content}
+          // value={this.props.content}
           onChange={this.props.handler}
+          // style={{height: window.innerHeight - 150 + "px"}}
         ></textarea>
       </>
     )

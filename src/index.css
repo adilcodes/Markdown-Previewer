@@ -1,43 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
-body{
+.flex{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+}
+.topBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #021226;
+    color: #fff;
 }
 .main-heading{
-    margin-top: 30px;
-    margin-bottom: 30px;
     text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
 }
 #editor{
-    resize: vertical;
-    width: 703px;
-    min-height: 313px;
-    padding: 10px 20px;
+    width: 50%;
     font-size: 20px;
-    color: rgb(82, 82, 82);
-    border-radius: 10px;
+    padding: 20px 30px;
+    border: 1px solid #000;
     transition: 0.1s;
-    margin-bottom: 30px;
-}
-#editor:focus{
-    border: 1px solid rgba(241, 26, 87, 0.739);
+    resize: none;
+    border: none;
+    border-right: 2px solid rgb(107, 105, 105);
     outline: none;
 }
+
 #preview{
-    width: 703px;
-    min-height: 100px;
-    padding: 10px 20px;
+    width: 50%;
     font-size: 20px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    border: 1px solid #333;
-    border-radius: 10px;
+    padding: 20px 30px;
+    border: 1px solid #000;
+    resize: none;
+    border: none;
+    border-left: 2px solid rgb(107, 105, 105);
 }
